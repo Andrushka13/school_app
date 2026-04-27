@@ -136,3 +136,17 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 LOGIN_URL = 'login/'
 LOGIN_REDIRECT_URL = 'dashboard/'
 LOGOUT_REDIRECT_URL = 'login/'
+
+# Настройки отправки электронной почты
+# Для разработки — все письма будут выводиться в файл
+if DEBUG:
+    EMAIL_BACKEND = 'eml_email_backend.EmailBackend'
+EMAIL_FILE_PATH = BASE_DIR / 'sent_emails'
+# Для реальной работы нужно будет настроить SMTP, например, для Gmail:
+# EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+# EMAIL_HOST = 'smtp.gmail.com'
+# EMAIL_PORT = 587
+# EMAIL_USE_TLS = True
+# EMAIL_HOST_USER = 'your-email@gmail.com'
+# EMAIL_HOST_PASSWORD = 'your-app-password'
+# DEFAULT_FROM_EMAIL = 'your-email@gmail.com'
