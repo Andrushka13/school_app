@@ -1,0 +1,40 @@
+{% extends 'student_base.html' %}
+{% load static %}
+
+{% block student_content %}
+<div class="card">
+    <div class="card-header bg-primary text-white">
+        <h4>Мои оценки по группе "{{ group.name }}"</h4>
+    </div>
+    <div class="card-body">
+        {% if error %}
+            <div class="alert alert-warning">{{ error }}</div>
+        {% else %}
+            {% if grades_by_subject %}
+                {% for subject, grades in grades_by_subject.items %}
+                <div class="mb-4">
+                    <h5>{{ subject }}</h5>
+                    <table class="table table-sm table-bordered">
+                        <thead>
+                            <tr><th>Тип контроля</th><th>Дата</th><th>Балл</th><th>Комментарий</th></tr>
+                        </thead>
+                        <tbody>
+                            {% for g in grades %}
+                            <tr>
+                                <td>{{ g.get_control_type_display }}</td>
+                                <td>{{ g.date|date:"d.m.Y" }}</td>
+                                <td><span class="badge bg-{% if g.score <= 2 %}danger{% elif g.score == 5 %}success{% else %}warning{% endif %}">{{ g.score }}</span></td>
+                                <td>{{ g.comment|default:"—" }}</td>
+                            </tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
+                {% endfor %}
+            {% else %}
+                <p class="text-muted">Пока нет оценок.</p>
+            {% endif %}
+        {% endif %}
+    </div>
+</div>
+{% endblock %}

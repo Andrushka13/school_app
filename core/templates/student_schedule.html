@@ -1,0 +1,51 @@
+{% extends 'student_base.html' %}
+{% load custom_filters %}
+
+{% block student_content %}
+<div class="card">
+    <div class="card-header bg-primary text-white">
+        <h4>Расписание на неделю с {{ start_of_week|date:"d.m.Y" }}</h4>
+    </div>
+    <div class="card-body">
+        {% if error %}
+            <div class="alert alert-warning">{{ error }}</div>
+        {% else %}
+            <div class="accordion" id="scheduleAccordion">
+                {% for day in week_days %}
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="heading{{ forloop.counter }}">
+                        <button class="accordion-button {% if not forloop.first %}collapsed{% endif %}" type="button" data-bs-toggle="collapse" data-bs-target="#collapse{{ forloop.counter }}">
+                            {{ day }}
+                        </button>
+                    </h2>
+                    <div id="collapse{{ forloop.counter }}" class="accordion-collapse collapse {% if forloop.first %}show{% endif %}" data-bs-parent="#scheduleAccordion">
+                        <div class="accordion-body">
+                            {% with lessons=schedule_by_day|get_item:day %}
+                                {% if lessons %}
+                                    <ul class="list-group">
+                                        {% for lesson in lessons %}
+                                        <li class="list-group-item">
+                                            <strong>{{ lesson.start_time|time:"H:i" }} – {{ lesson.end_time|time:"H:i" }}</strong><br>
+                                            {{ lesson.subject.name }}<br>
+                                            {{ lesson.teacher.last_name }} {{ lesson.teacher.first_name }}<br>
+                                            {% if lesson.format == 'offline' %}
+                                                📍 Ауд. {{ lesson.classroom }}
+                                            {% else %}
+                                                💻 <a href="{{ lesson.video_link }}" target="_blank">Ссылка на занятие</a>
+                                            {% endif %}
+                                        </li>
+                                        {% endfor %}
+                                    </ul>
+                                {% else %}
+                                    <p class="text-muted">Занятий нет</p>
+                                {% endif %}
+                            {% endwith %}
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        {% endif %}
+    </div>
+</div>
+{% endblock %}

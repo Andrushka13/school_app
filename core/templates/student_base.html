@@ -1,0 +1,66 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block extra_css %}
+<style>
+    /* Стили для бокового меню */
+    .offcanvas-body .nav-link {
+        padding: 0.75rem 1rem;
+        color: #333;
+        transition: background-color 0.2s;
+    }
+    .offcanvas-body .nav-link:hover {
+        background-color: #f8f9fa;
+    }
+    .offcanvas-body .nav-link.active {
+        background-color: #0d6efd;
+        color: white;
+    }
+    .burger-btn {
+        border: none;
+        background: none;
+        font-size: 1.8rem;
+        color: white;
+        cursor: pointer;
+        margin-right: 15px;
+    }
+</style>
+{% endblock %}
+
+{% block content %}
+<!-- Кнопка-бургер (будет находиться в шапке, поэтому нужно модифицировать base.html) -->
+<!-- Но мы добавим в base.html соответствующий блок, а здесь его переопределим -->
+<div class="container-fluid">
+    <div class="row">
+        <!-- Основной контент -->
+        <main class="col-md-12 ms-sm-auto px-md-4">
+            {% block student_content %}
+            {% endblock %}
+        </main>
+    </div>
+</div>
+
+<!-- Offcanvas-меню (боковая панель) -->
+<div class="offcanvas offcanvas-start" tabindex="-1" id="studentMenu" aria-labelledby="studentMenuLabel">
+    <div class="offcanvas-header">
+        <h5 class="offcanvas-title" id="studentMenuLabel">Меню студента</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Закрыть"></button>
+    </div>
+    <div class="offcanvas-body">
+        <ul class="nav flex-column">
+            <li class="nav-item">
+                <a class="nav-link {% if request.resolver_match.url_name == 'student_account' %}active{% endif %}" href="{% url 'core:student_account' %}">👤 Аккаунт</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link {% if request.resolver_match.url_name == 'student_schedule' %}active{% endif %}" href="{% url 'core:student_schedule' %}">📅 Расписание занятий</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link {% if request.resolver_match.url_name == 'student_grades' %}active{% endif %}" href="{% url 'core:student_grades' %}">📊 Мои оценки</a>
+            </li>
+            <li class="nav-item mt-auto">
+                <a class="nav-link text-danger" href="{% url 'core:logout' %}">🚪 Выход</a>
+            </li>
+        </ul>
+    </div>
+</div>
+{% endblock %}
