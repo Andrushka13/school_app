@@ -1,7 +1,7 @@
 from django.db.models.signals import post_save, pre_delete
 from django.dispatch import receiver
 from django.core.mail import send_mail
-from .models import Grade, Shedule, Student
+from .models import Grade, Schedule, Student
 
 
 @receiver(post_save, sender=Grade)
@@ -21,7 +21,7 @@ def notify_unsatisfactory_grade(sender, instance, created, **kwargs):
         )
         
 
-@receiver(pre_delete, sender=Shedule)
+@receiver(pre_delete, sender=Schedule)
 def handle_shedule_deletion(sender, instance, **kwargs):
     """
     при удалении занятия обнуляем связи в посещаемости и оценках (согдасно ТЗ данные не удаляются, но теряют привязку к дате).

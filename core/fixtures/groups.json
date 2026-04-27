@@ -1,0 +1,22 @@
+[
+  { "model": "core.group", "pk": 1, "fields": { "name": "PY-1", "direction": 1, "study_form": "fulltime", "start_date": "2025-01-15", "end_date": "2025-06-15", "status": "studying" } },
+  { "model": "core.group", "pk": 2, "fields": { "name": "PY-2", "direction": 1, "study_form": "distance", "start_date": "2025-02-01", "end_date": "2025-07-01", "status": "studying" } },
+  { "model": "core.group", "pk": 3, "fields": { "name": "WEB-1", "direction": 2, "study_form": "fulltime", "start_date": "2025-01-20", "end_date": "2025-06-20", "status": "studying" } },
+  { "model": "core.group", "pk": 4, "fields": { "name": "WEB-2", "direction": 2, "study_form": "distance", "start_date": "2025-03-01", "end_date": "2025-08-01", "status": "forming" } },
+  { "model": "core.group", "pk": 5, "fields": { "name": "PY-3", "direction": 1, "study_form": "fulltime", "start_date": "2025-02-10", "end_date": "2025-07-10", "status": "studying" } },
+  { "model": "core.group", "pk": 6, "fields": { "name": "PY-4", "direction": 1, "study_form": "distance", "start_date": "2025-03-15", "end_date": "2025-08-15", "status": "forming" } },
+  { "model": "core.group", "pk": 7, "fields": { "name": "WEB-3", "direction": 2, "study_form": "fulltime", "start_date": "2025-02-20", "end_date": "2025-07-20", "status": "studying" } },
+  { "model": "core.group", "pk": 8, "fields": { "name": "WEB-4", "direction": 2, "study_form": "distance", "start_date": "2025-04-01", "end_date": "2025-09-01", "status": "forming" } },
+  { "model": "core.group", "pk": 9, "fields": { "name": "DS-1", "direction": 3, "study_form": "fulltime", "start_date": "2025-01-10", "end_date": "2025-06-10", "status": "graduated" } },
+  { "model": "core.group", "pk": 10, "fields": { "name": "DS-2", "direction": 3, "study_form": "distance", "start_date": "2025-02-05", "end_date": "2025-07-05", "status": "studying" } },
+  { "model": "core.group", "pk": 11, "fields": { "name": "DEV-1", "direction": 4, "study_form": "fulltime", "start_date": "2025-01-25", "end_date": "2025-06-25", "status": "studying" } },
+  { "model": "core.group", "pk": 12, "fields": { "name": "DEV-2", "direction": 4, "study_form": "distance", "start_date": "2025-03-10", "end_date": "2025-08-10", "status": "forming" } },
+  { "model": "core.group", "pk": 13, "fields": { "name": "QA-1", "direction": 5, "study_form": "fulltime", "start_date": "2025-02-15", "end_date": "2025-07-15", "status": "studying" } },
+  { "model": "core.group", "pk": 14, "fields": { "name": "QA-2", "direction": 5, "study_form": "distance", "start_date": "2025-04-01", "end_date": "2025-09-01", "status": "forming" } },
+  { "model": "core.group", "pk": 15, "fields": { "name": "UX-1", "direction": 6, "study_form": "fulltime", "start_date": "2025-01-30", "end_date": "2025-06-30", "status": "studying" } },
+  { "model": "core.group", "pk": 16, "fields": { "name": "UX-2", "direction": 6, "study_form": "distance", "start_date": "2025-03-20", "end_date": "2025-08-20", "status": "forming" } },
+  { "model": "core.group", "pk": 17, "fields": { "name": "PM-1", "direction": 7, "study_form": "fulltime", "start_date": "2025-02-25", "end_date": "2025-07-25", "status": "studying" } },
+  { "model": "core.group", "pk": 18, "fields": { "name": "PM-2", "direction": 7, "study_form": "distance", "start_date": "2025-04-10", "end_date": "2025-09-10", "status": "forming" } },
+  { "model": "core.group", "pk": 19, "fields": { "name": "DEVOPS-1", "direction": 8, "study_form": "fulltime", "start_date": "2025-01-05", "end_date": "2025-06-05", "status": "studying" } },
+  { "model": "core.group", "pk": 20, "fields": { "name": "DEVOPS-2", "direction": 8, "study_form": "distance", "start_date": "2025-03-05", "end_date": "2025-08-05", "status": "forming" } }
+]

@@ -1,0 +1,22 @@
+[
+  { "model": "core.attendance", "pk": 1, "fields": { "schedule": 1, "student": 1, "is_present": true, "comment": "" } },
+  { "model": "core.attendance", "pk": 2, "fields": { "schedule": 1, "student": 2, "is_present": true, "comment": "" } },
+  { "model": "core.attendance", "pk": 3, "fields": { "schedule": 2, "student": 1, "is_present": false, "comment": "Болеет" } },
+  { "model": "core.attendance", "pk": 4, "fields": { "schedule": 2, "student": 2, "is_present": true, "comment": "" } },
+  { "model": "core.attendance", "pk": 5, "fields": { "schedule": 3, "student": 3, "is_present": true, "comment": "" } },
+  { "model": "core.attendance", "pk": 6, "fields": { "schedule": 3, "student": 4, "is_present": false, "comment": "Опоздание" } },
+  { "model": "core.attendance", "pk": 7, "fields": { "schedule": 4, "student": 3, "is_present": true, "comment": "" } },
+  { "model": "core.attendance", "pk": 8, "fields": { "schedule": 4, "student": 4, "is_present": true, "comment": "" } },
+  { "model": "core.attendance", "pk": 9, "fields": { "schedule": 5, "student": 5, "is_present": true, "comment": "" } },
+  { "model": "core.attendance", "pk": 10, "fields": { "schedule": 5, "student": 6, "is_present": true, "comment": "" } },
+  { "model": "core.attendance", "pk": 11, "fields": { "schedule": 6, "student": 5, "is_present": false, "comment": "Не явился" } },
+  { "model": "core.attendance", "pk": 12, "fields": { "schedule": 6, "student": 6, "is_present": true, "comment": "" } },
+  { "model": "core.attendance", "pk": 13, "fields": { "schedule": 7, "student": 7, "is_present": true, "comment": "" } },
+  { "model": "core.attendance", "pk": 14, "fields": { "schedule": 7, "student": 8, "is_present": false, "comment": "По семейным обстоятельствам" } },
+  { "model": "core.attendance", "pk": 15, "fields": { "schedule": 8, "student": 9, "is_present": true, "comment": "" } },
+  { "model": "core.attendance", "pk": 16, "fields": { "schedule": 8, "student": 10, "is_present": true, "comment": "" } },
+  { "model": "core.attendance", "pk": 17, "fields": { "schedule": 9, "student": 9, "is_present": true, "comment": "" } },
+  { "model": "core.attendance", "pk": 18, "fields": { "schedule": 10, "student": 11, "is_present": false, "comment": "Отсутствует" } },
+  { "model": "core.attendance", "pk": 19, "fields": { "schedule": 10, "student": 12, "is_present": true, "comment": "" } },
+  { "model": "core.attendance", "pk": 20, "fields": { "schedule": 11, "student": 13, "is_present": true, "comment": "" } }
+]

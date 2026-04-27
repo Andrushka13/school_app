@@ -1,0 +1,8 @@
+[
+  { "model": "core.position", "pk": 1, "fields": { "name": "Преподаватель высшей категории" } },
+  { "model": "core.position", "pk": 2, "fields": { "name": "Преподаватель первой категории" } },
+  { "model": "core.controlform", "pk": 1, "fields": { "name": "Зачёт" } },
+  { "model": "core.controlform", "pk": 2, "fields": { "name": "Экзамен" } },
+  { "model": "core.direction", "pk": 1, "fields": { "name": "Python-разработчик", "description": "Обучение Python с нуля", "status": "open" } },
+  { "model": "core.direction", "pk": 2, "fields": { "name": "Веб-дизайн", "description": "HTML, CSS, JavaScript", "status": "open" } }
+]

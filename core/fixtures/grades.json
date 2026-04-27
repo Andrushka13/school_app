@@ -1,0 +1,22 @@
+[
+  { "model": "core.grade", "pk": 1, "fields": { "student": 1, "subject": 1, "group": 1, "control_type": "current", "date": "2025-02-15", "score": 5, "comment": "Молодец!", "schedule": 1 } },
+  { "model": "core.grade", "pk": 2, "fields": { "student": 2, "subject": 1, "group": 1, "control_type": "current", "date": "2025-02-15", "score": 4, "comment": "Хорошо", "schedule": 1 } },
+  { "model": "core.grade", "pk": 3, "fields": { "student": 1, "subject": 2, "group": 1, "control_type": "current", "date": "2025-02-17", "score": 5, "comment": "", "schedule": 2 } },
+  { "model": "core.grade", "pk": 4, "fields": { "student": 2, "subject": 2, "group": 1, "control_type": "current", "date": "2025-02-17", "score": 3, "comment": "Нужно доработать", "schedule": 2 } },
+  { "model": "core.grade", "pk": 5, "fields": { "student": 3, "subject": 1, "group": 2, "control_type": "current", "date": "2025-02-16", "score": 4, "comment": "", "schedule": 3 } },
+  { "model": "core.grade", "pk": 6, "fields": { "student": 4, "subject": 1, "group": 2, "control_type": "current", "date": "2025-02-16", "score": 5, "comment": "Отлично!", "schedule": 3 } },
+  { "model": "core.grade", "pk": 7, "fields": { "student": 3, "subject": 3, "group": 2, "control_type": "intermediate", "date": "2025-02-18", "score": 4, "comment": "", "schedule": 4 } },
+  { "model": "core.grade", "pk": 8, "fields": { "student": 5, "subject": 4, "group": 3, "control_type": "current", "date": "2025-02-15", "score": 5, "comment": "", "schedule": 5 } },
+  { "model": "core.grade", "pk": 9, "fields": { "student": 6, "subject": 4, "group": 3, "control_type": "current", "date": "2025-02-15", "score": 4, "comment": "", "schedule": 5 } },
+  { "model": "core.grade", "pk": 10, "fields": { "student": 5, "subject": 5, "group": 3, "control_type": "current", "date": "2025-02-19", "score": 3, "comment": "Ошибки в синтаксисе", "schedule": 6 } },
+  { "model": "core.grade", "pk": 11, "fields": { "student": 7, "subject": 6, "group": 4, "control_type": "current", "date": "2025-02-20", "score": 5, "comment": "", "schedule": 7 } },
+  { "model": "core.grade", "pk": 12, "fields": { "student": 8, "subject": 6, "group": 4, "control_type": "current", "date": "2025-02-20", "score": 4, "comment": "", "schedule": 7 } },
+  { "model": "core.grade", "pk": 13, "fields": { "student": 9, "subject": 1, "group": 5, "control_type": "final", "date": "2025-02-28", "score": 5, "comment": "Отличное знание Python", "schedule": null } },
+  { "model": "core.grade", "pk": 14, "fields": { "student": 10, "subject": 1, "group": 5, "control_type": "final", "date": "2025-02-28", "score": 4, "comment": "", "schedule": null } },
+  { "model": "core.grade", "pk": 15, "fields": { "student": 11, "subject": 2, "group": 6, "control_type": "intermediate", "date": "2025-03-01", "score": 2, "comment": "Неудовлетворительно, требуется пересдача", "schedule": 10 } },
+  { "model": "core.grade", "pk": 16, "fields": { "student": 12, "subject": 2, "group": 6, "control_type": "intermediate", "date": "2025-03-01", "score": 3, "comment": "", "schedule": 10 } },
+  { "model": "core.grade", "pk": 17, "fields": { "student": 13, "subject": 4, "group": 7, "control_type": "current", "date": "2025-02-17", "score": 5, "comment": "", "schedule": 11 } },
+  { "model": "core.grade", "pk": 18, "fields": { "student": 14, "subject": 4, "group": 7, "control_type": "current", "date": "2025-02-17", "score": 4, "comment": "", "schedule": 11 } },
+  { "model": "core.grade", "pk": 19, "fields": { "student": 13, "subject": 5, "group": 7, "control_type": "final", "date": "2025-03-05", "score": 4, "comment": "Хорошо", "schedule": null } },
+  { "model": "core.grade", "pk": 20, "fields": { "student": 17, "subject": 9, "group": 9, "control_type": "final", "date": "2025-02-25", "score": 5, "comment": "Отлично сдал", "schedule": 14 } }
+]

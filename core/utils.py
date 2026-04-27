@@ -18,11 +18,11 @@ def check_teacher_workload(
     week_end = week_start + timedelta(days=6)
     shedules = teacher.shedules.filter(date__gte=week_start, date__lte=week_end)
     if exclude_shedule_id:
-        shedules = shedules.exclude(id=exclude_shedule_id)
+        schedules = shedules.exclude(id=exclude_shedule_id)
     
     # суммируем длительность занятий в часах
     total_hours = 0
-    for sh in shedules:
+    for sh in schedules:
         duration = (sh.end_time.hour + sh.end_time.minute/60) - (sh.start_time.hour + sh.start_time.minute/60)
         total_hours += duration
     

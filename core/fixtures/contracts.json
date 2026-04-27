@@ -1,0 +1,22 @@
+[
+  { "model": "core.contract", "pk": 1, "fields": { "student": 1, "conclusion_date": "2025-01-10", "contract_number": "Д001/25", "file_link": "https://unikron.ru/contracts/001.pdf" } },
+  { "model": "core.contract", "pk": 2, "fields": { "student": 2, "conclusion_date": "2025-01-11", "contract_number": "Д002/25", "file_link": "https://unikron.ru/contracts/002.pdf" } },
+  { "model": "core.contract", "pk": 3, "fields": { "student": 3, "conclusion_date": "2025-01-12", "contract_number": "Д003/25", "file_link": "https://unikron.ru/contracts/003.pdf" } },
+  { "model": "core.contract", "pk": 4, "fields": { "student": 4, "conclusion_date": "2025-01-13", "contract_number": "Д004/25", "file_link": "https://unikron.ru/contracts/004.pdf" } },
+  { "model": "core.contract", "pk": 5, "fields": { "student": 5, "conclusion_date": "2025-01-14", "contract_number": "Д005/25", "file_link": "https://unikron.ru/contracts/005.pdf" } },
+  { "model": "core.contract", "pk": 6, "fields": { "student": 6, "conclusion_date": "2025-01-15", "contract_number": "Д006/25", "file_link": "https://unikron.ru/contracts/006.pdf" } },
+  { "model": "core.contract", "pk": 7, "fields": { "student": 7, "conclusion_date": "2025-01-16", "contract_number": "Д007/25", "file_link": "https://unikron.ru/contracts/007.pdf" } },
+  { "model": "core.contract", "pk": 8, "fields": { "student": 8, "conclusion_date": "2025-01-17", "contract_number": "Д008/25", "file_link": "https://unikron.ru/contracts/008.pdf" } },
+  { "model": "core.contract", "pk": 9, "fields": { "student": 9, "conclusion_date": "2025-01-18", "contract_number": "Д009/25", "file_link": "https://unikron.ru/contracts/009.pdf" } },
+  { "model": "core.contract", "pk": 10, "fields": { "student": 10, "conclusion_date": "2025-01-19", "contract_number": "Д010/25", "file_link": "https://unikron.ru/contracts/010.pdf" } },
+  { "model": "core.contract", "pk": 11, "fields": { "student": 11, "conclusion_date": "2025-01-20", "contract_number": "Д011/25", "file_link": "https://unikron.ru/contracts/011.pdf" } },
+  { "model": "core.contract", "pk": 12, "fields": { "student": 12, "conclusion_date": "2025-01-21", "contract_number": "Д012/25", "file_link": "https://unikron.ru/contracts/012.pdf" } },
+  { "model": "core.contract", "pk": 13, "fields": { "student": 13, "conclusion_date": "2025-01-22", "contract_number": "Д013/25", "file_link": "https://unikron.ru/contracts/013.pdf" } },
+  { "model": "core.contract", "pk": 14, "fields": { "student": 14, "conclusion_date": "2025-01-23", "contract_number": "Д014/25", "file_link": "https://unikron.ru/contracts/014.pdf" } },
+  { "model": "core.contract", "pk": 15, "fields": { "student": 15, "conclusion_date": "2025-01-24", "contract_number": "Д015/25", "file_link": "https://unikron.ru/contracts/015.pdf" } },
+  { "model": "core.contract", "pk": 16, "fields": { "student": 16, "conclusion_date": "2025-01-25", "contract_number": "Д016/25", "file_link": "https://unikron.ru/contracts/016.pdf" } },
+  { "model": "core.contract", "pk": 17, "fields": { "student": 17, "conclusion_date": "2025-01-26", "contract_number": "Д017/25", "file_link": "https://unikron.ru/contracts/017.pdf" } },
+  { "model": "core.contract", "pk": 18, "fields": { "student": 18, "conclusion_date": "2025-01-27", "contract_number": "Д018/25", "file_link": "https://unikron.ru/contracts/018.pdf" } },
+  { "model": "core.contract", "pk": 19, "fields": { "student": 19, "conclusion_date": "2025-01-28", "contract_number": "Д019/25", "file_link": "https://unikron.ru/contracts/019.pdf" } },
+  { "model": "core.contract", "pk": 20, "fields": { "student": 20, "conclusion_date": "2025-01-29", "contract_number": "Д020/25", "file_link": "https://unikron.ru/contracts/020.pdf" } }
+]

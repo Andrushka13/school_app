@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="alert alert-secondary">
+    <h2>Добро пожаловать, {{ username }}!</h2>
+    <p class="lead">Ваша роль: <strong>Администратор / Руководитель</strong> IT-школы «Юникрон».</p>
+    <hr>
+    <p>Здесь будет панель управления: отчёты, управление группами, расписанием и т.д.</p>
+    <a href="/admin/" class="btn btn-dark">Перейти в Django Admin</a>
+</div>
+{% endblock %}

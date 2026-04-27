@@ -1,0 +1,10 @@
+[
+  { "model": "core.direction", "pk": 1, "fields": { "name": "Python-разработчик", "description": "Обучение Python с нуля", "status": "open" } },
+  { "model": "core.direction", "pk": 2, "fields": { "name": "Веб-дизайн", "description": "HTML, CSS, JavaScript", "status": "open" } },
+  { "model": "core.direction", "pk": 3, "fields": { "name": "Data Science", "description": "Анализ данных и ML", "status": "open" } },
+  { "model": "core.direction", "pk": 4, "fields": { "name": "Мобильная разработка", "description": "iOS/Android", "status": "open" } },
+  { "model": "core.direction", "pk": 5, "fields": { "name": "QA-инженер", "description": "Тестирование ПО", "status": "open" } },
+  { "model": "core.direction", "pk": 6, "fields": { "name": "UX/UI дизайн", "description": "Дизайн интерфейсов", "status": "open" } },
+  { "model": "core.direction", "pk": 7, "fields": { "name": "Управление проектами", "description": "PM в IT", "status": "open" } },
+  { "model": "core.direction", "pk": 8, "fields": { "name": "DevOps", "description": "CI/CD, облака", "status": "open" } }
+]

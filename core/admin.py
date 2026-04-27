@@ -1,6 +1,6 @@
 from django.contrib import admin
 from .models import (
-    Position, Contract, ControlForm, Direction, Teacher, Student, Group, Subject, StudyPlan, Shedule, Attendance, Grade, EnrollmentRequest,
+    Position, Contract, ControlForm, Direction, Teacher, Student, Group, Subject, StudyPlan, Schedule, Attendance, Grade, EnrollmentRequest,
 )
 # Register your models here.
 @admin.register(Position)
@@ -56,7 +56,7 @@ class StudyPlan(admin.ModelAdmin):
     list_filter = ('group', 'subject')
     raw_id_fields = ('group', 'subject', 'teacher')
 
-@admin.register(Shedule)
+@admin.register(Schedule)
 class SheduleAdmin(admin.ModelAdmin):
     list_display = ('id', 'date', 'start_time', 'end_time', 'group', 'subject', 'teacher', 'format')
     list_filter = ('format', 'date', 'group')
@@ -65,15 +65,15 @@ class SheduleAdmin(admin.ModelAdmin):
 
 @admin.register(Attendance)
 class AttendanceAdmin(admin.ModelAdmin):
-    list_display = ('id', 'shedule', 'student', 'is_present')
+    list_display = ('id', 'schedule', 'student', 'is_present')
     list_filter = ('is_present',)
-    raw_id_fields = ('shedule', 'student')
+    raw_id_fields = ('schedule', 'student')
 
 @admin.register(Grade)
 class GradeAdmin(admin.ModelAdmin):
     list_display = ('id', 'student', 'subject', 'score', 'control_type', 'date')
     list_filter = ('control_type', 'subject')
-    raw_id_fields = ('student', 'subject', 'group', 'shedule')
+    raw_id_fields = ('student', 'subject', 'group', 'schedule')
 
 @admin.register(EnrollmentRequest)
 class EnrollmentRequestAdmin(admin.ModelAdmin):

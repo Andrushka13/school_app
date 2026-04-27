@@ -211,7 +211,7 @@ class StudyPlan(models.Model):
         return f"{self.group} - {self.subject}"
 
 
-class Shedule(models.Model):
+class Schedule(models.Model):
     """Расписание занятий (с поддержкой истории изменений)"""
     FORMAT_CHOICES = [
         ('offline', 'Очно'),
@@ -256,18 +256,18 @@ class Shedule(models.Model):
 
 class Attendance(models.Model):
     """Посещаемость занятия"""
-    shedule = models.ForeignKey(Shedule, on_delete=models.SET_NULL, null=True, related_name='attendances', verbose_name="Занятие")
+    schedule = models.ForeignKey(Schedule, on_delete=models.SET_NULL, null=True, related_name='attendances', verbose_name="Занятие")
     student = models.ForeignKey(Student, on_delete=models.CASCADE, related_name='attendances', verbose_name="Ученик")
     is_present = models.BooleanField(default=True, verbose_name="Присутствовал")
     comment = models.TextField(blank=True, verbose_name="Примечание")
     
     class Meta:
-        unique_together = [['shedule', 'student']]
+        unique_together = [['schedule', 'student']]
         verbose_name = "Посещаемость"
         verbose_name_plural = "Посещаемость"
     
     def __str__(self):
-        return f"{self.student} - {self.shedule} - {'Присутствовал' if self.is_present else 'Отсутствовал'}"
+        return f"{self.student} - {self.schedule} - {'Присутствовал' if self.is_present else 'Отсутствовал'}"
     
     
 class Grade(models.Model):
@@ -284,7 +284,7 @@ class Grade(models.Model):
     date = models.DateField(auto_now_add=True, verbose_name="Дата выставления")
     score = models.PositiveSmallIntegerField(validators=[MinValueValidator(1), MaxValueValidator(5)], verbose_name="Балл 1 - 5")
     comment = models.TextField(blank=True, verbose_name="Комментарий преподавателя")
-    shedule = models.ForeignKey(Shedule, on_delete=models.SET_NULL, null=True, blank=True, related_name='grades', verbose_name="Связанное занятие")
+    schedule = models.ForeignKey(Schedule, on_delete=models.SET_NULL, null=True, blank=True, related_name='grades', verbose_name="Связанное занятие")
     
     class Meta:
         # УникльностьЖ ученик + предмет + тип контроля. Только для итоговой оценки,

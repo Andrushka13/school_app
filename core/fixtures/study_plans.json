@@ -1,0 +1,22 @@
+[
+  { "model": "core.studyplan", "pk": 1, "fields": { "group": 1, "subject": 1, "teacher": 1 } },
+  { "model": "core.studyplan", "pk": 2, "fields": { "group": 1, "subject": 2, "teacher": 1 } },
+  { "model": "core.studyplan", "pk": 3, "fields": { "group": 1, "subject": 7, "teacher": 10 } },
+  { "model": "core.studyplan", "pk": 4, "fields": { "group": 2, "subject": 1, "teacher": 1 } },
+  { "model": "core.studyplan", "pk": 5, "fields": { "group": 2, "subject": 3, "teacher": 13 } },
+  { "model": "core.studyplan", "pk": 6, "fields": { "group": 3, "subject": 4, "teacher": 2 } },
+  { "model": "core.studyplan", "pk": 7, "fields": { "group": 3, "subject": 5, "teacher": 2 } },
+  { "model": "core.studyplan", "pk": 8, "fields": { "group": 4, "subject": 6, "teacher": 2 } },
+  { "model": "core.studyplan", "pk": 9, "fields": { "group": 5, "subject": 1, "teacher": 1 } },
+  { "model": "core.studyplan", "pk": 10, "fields": { "group": 5, "subject": 7, "teacher": 10 } },
+  { "model": "core.studyplan", "pk": 11, "fields": { "group": 6, "subject": 2, "teacher": 13 } },
+  { "model": "core.studyplan", "pk": 12, "fields": { "group": 7, "subject": 4, "teacher": 2 } },
+  { "model": "core.studyplan", "pk": 13, "fields": { "group": 7, "subject": 5, "teacher": 2 } },
+  { "model": "core.studyplan", "pk": 14, "fields": { "group": 8, "subject": 6, "teacher": 2 } },
+  { "model": "core.studyplan", "pk": 15, "fields": { "group": 9, "subject": 9, "teacher": 3 } },
+  { "model": "core.studyplan", "pk": 16, "fields": { "group": 9, "subject": 10, "teacher": 3 } },
+  { "model": "core.studyplan", "pk": 17, "fields": { "group": 10, "subject": 9, "teacher": 16 } },
+  { "model": "core.studyplan", "pk": 18, "fields": { "group": 11, "subject": 11, "teacher": 4 } },
+  { "model": "core.studyplan", "pk": 19, "fields": { "group": 11, "subject": 12, "teacher": 4 } },
+  { "model": "core.studyplan", "pk": 20, "fields": { "group": 12, "subject": 11, "teacher": 4 } }
+]

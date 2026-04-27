@@ -1,0 +1,39 @@
+/* core/static/core/css/style.css */
+body {
+    background-color: #f8f9fa;
+}
+
+.navbar-brand {
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.card {
+    border-radius: 15px;
+    border: none;
+}
+
+.card-header {
+    border-radius: 15px 15px 0 0 !important;
+}
+
+.btn-primary {
+    background-color: #0d6efd;
+    border-color: #0a58ca;
+}
+
+.btn-primary:hover {
+    background-color: #0b5ed7;
+}
+
+.alert {
+    border-radius: 10px;
+}
+
+footer {
+    margin-top: 50px;
+    text-align: center;
+    padding: 20px;
+    background-color: #e9ecef;
+    border-radius: 10px;
+}

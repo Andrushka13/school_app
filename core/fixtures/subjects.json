@@ -1,0 +1,22 @@
+[
+  { "model": "core.subject", "pk": 1, "fields": { "name": "Основы Python", "hours": 40, "description": "Введение в программирование на Python", "control_form": 2, "direction": 1 } },
+  { "model": "core.subject", "pk": 2, "fields": { "name": "ООП в Python", "hours": 32, "description": "Объектно-ориентированное программирование", "control_form": 2, "direction": 1 } },
+  { "model": "core.subject", "pk": 3, "fields": { "name": "Django Framework", "hours": 48, "description": "Веб-разработка на Django", "control_form": 2, "direction": 1 } },
+  { "model": "core.subject", "pk": 4, "fields": { "name": "Основы HTML/CSS", "hours": 30, "description": "Вёрстка веб-страниц", "control_form": 1, "direction": 2 } },
+  { "model": "core.subject", "pk": 5, "fields": { "name": "JavaScript", "hours": 40, "description": "Язык программирования для фронтенда", "control_form": 2, "direction": 2 } },
+  { "model": "core.subject", "pk": 6, "fields": { "name": "React", "hours": 50, "description": "Библиотека для создания UI", "control_form": 2, "direction": 2 } },
+  { "model": "core.subject", "pk": 7, "fields": { "name": "SQL и базы данных", "hours": 36, "description": "Работа с реляционными базами", "control_form": 2, "direction": 1 } },
+  { "model": "core.subject", "pk": 8, "fields": { "name": "Git и GitHub", "hours": 16, "description": "Системы контроля версий", "control_form": 1, "direction": 1 } },
+  { "model": "core.subject", "pk": 9, "fields": { "name": "Алгоритмы и структуры данных", "hours": 60, "description": "Базовые алгоритмы и структуры", "control_form": 2, "direction": 3 } },
+  { "model": "core.subject", "pk": 10, "fields": { "name": "Машинное обучение", "hours": 80, "description": "ML на Python", "control_form": 2, "direction": 3 } },
+  { "model": "core.subject", "pk": 11, "fields": { "name": "Java Core", "hours": 48, "description": "Основы Java", "control_form": 2, "direction": 4 } },
+  { "model": "core.subject", "pk": 12, "fields": { "name": "Spring Boot", "hours": 56, "description": "Разработка на Spring", "control_form": 2, "direction": 4 } },
+  { "model": "core.subject", "pk": 13, "fields": { "name": "Тестирование ПО", "hours": 40, "description": "Методы и инструменты тестирования", "control_form": 2, "direction": 5 } },
+  { "model": "core.subject", "pk": 14, "fields": { "name": "Автоматизация тестирования", "hours": 48, "description": "Selenium, Pytest", "control_form": 2, "direction": 5 } },
+  { "model": "core.subject", "pk": 15, "fields": { "name": "UX/UI дизайн", "hours": 44, "description": "Пользовательский интерфейс и опыт", "control_form": 1, "direction": 6 } },
+  { "model": "core.subject", "pk": 16, "fields": { "name": "Figma", "hours": 24, "description": "Прототипирование", "control_form": 1, "direction": 6 } },
+  { "model": "core.subject", "pk": 17, "fields": { "name": "Управление IT-проектами", "hours": 36, "description": "Agile, Scrum, Waterfall", "control_form": 1, "direction": 7 } },
+  { "model": "core.subject", "pk": 18, "fields": { "name": "Linux администрирование", "hours": 40, "description": "Основы Linux", "control_form": 2, "direction": 8 } },
+  { "model": "core.subject", "pk": 19, "fields": { "name": "Docker и контейнеризация", "hours": 32, "description": "Контейнеризация", "control_form": 2, "direction": 8 } },
+  { "model": "core.subject", "pk": 20, "fields": { "name": "CI/CD", "hours": 28, "description": "Непрерывная интеграция и доставка", "control_form": 1, "direction": 8 } }
+]
