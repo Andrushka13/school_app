@@ -52,6 +52,37 @@ class Direction(models.Model):
         return self.name
 
 
+class Methodologist(models.Model):
+    """Методист - управляет учебным процессом"""
+    STATUS_CHOICES = [
+        ('active', 'Работает'),
+        ('fired', 'Уволен')
+    ]
+    
+    user = models.OneToOneField(
+        User,
+        on_delete=models.SET_NULL,
+        null=True,
+        blank=True,
+        related_name='methodist_profile',
+        verbose_name="Пользователь (аутентификация)"
+    )
+    last_name = models.CharField(max_length=100, verbose_name="Фамилия")
+    first_name = models.CharField(max_length=100, verbose_name="Имя")
+    patronymic = models.CharField(max_length=100, blank=True, verbose_name="Отчество")
+    phone = models.CharField(max_length=20, unique=True, validators=[validate_phone], verbose_name="Телефон")
+    email = models.EmailField(unique=True, verbose_name="Email")
+    hire_date = models.DateField(default=timezone.now, verbose_name="Дата приёма на работу")
+    status = models.CharField(max_length=10, choices=STATUS_CHOICES, default='active', verbose_name="Статус")
+    
+    class Meta:
+        verbose_name = "Методист"
+        verbose_name_plural = "Методисты"
+    
+    def __str__(self):
+        return f"{self.last_name} {self.first_name}"
+
+
 class Teacher(models.Model):
     """Преподаватель"""
     STATUS_CHOICES = [

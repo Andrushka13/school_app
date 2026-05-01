@@ -1,6 +1,6 @@
 from django.contrib import admin
 from .models import (
-    Position, Contract, ControlForm, Direction, Teacher, Student, Group, Subject, StudyPlan, Schedule, Attendance, Grade, EnrollmentRequest,
+    Position, Contract, ControlForm, Direction, Teacher, Student, Group, Subject, StudyPlan, Schedule, Attendance, Grade, EnrollmentRequest, Methodologist
 )
 # Register your models here.
 @admin.register(Position)
@@ -79,4 +79,10 @@ class GradeAdmin(admin.ModelAdmin):
 class EnrollmentRequestAdmin(admin.ModelAdmin):
     list_display = ('id', 'last_name', 'first_name', 'phone', 'email', 'direction', 'status')
     list_filter = ('direction', 'status')
+    search_fields = ('last_name', 'first_name', 'email', 'phone')
+
+@admin.register(Methodologist)
+class MethodologistAdmin(admin.ModelAdmin):
+    list_display = ('id', 'last_name', 'first_name', 'phone', 'email', 'status')
+    list_filter = ('status',)
     search_fields = ('last_name', 'first_name', 'email', 'phone')

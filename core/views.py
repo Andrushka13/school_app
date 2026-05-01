@@ -4,7 +4,8 @@ from django.contrib.auth.decorators import login_required
 from django.contrib.auth.views import LoginView
 from django.urls import reverse_lazy
 from django.utils import timezone
-from datetime import datetime, timedelta
+import calendar
+from datetime import datetime, timedelta, date
 from .forms import LoginForm
 from .models import Student, Schedule, Grade
 
@@ -35,10 +36,29 @@ def dashboard(request):
         return redirect('core:student_account')
     elif hasattr(user, 'teacher_profile') and user.teacher_profile:
         return render(request, 'dashboard_teacher.html', {'username': user.get_full_name()})
+    elif hasattr(user, 'methodist_profile') and user.methodist_profile:
+        return redirect('core:methodist_dashboard')
     elif user.is_staff or user.is_superuser:
         return render(request, 'dashboard_admin.html', {'username': user.get_full_name()})
     else:
         return render(request, 'dashboard_unknown.html', {'username': user.get_full_name()})
+
+@login_required
+def methodist_dashboard(request):
+    """Личный кабинет методиста"""
+    # Получаем текущий день недели и дату
+    today = timezone.now().date()
+    # Названия дней недели
+    weekdays_ru = ['Понедельник', 'Вторник', 'Среда', 'Четверг', 'Пятница', 'Суббота', 'Воскресенье']
+    day_of_week = weekdays_ru[today.weekday()]
+    formatted_date = today.strftime("%d.%m.%Y")
+    
+    context = {
+        'day_of_week': day_of_week,
+        'current_date': formatted_date,
+        'username': request.user.first_name or request.user.username
+    }
+    return render(request, 'methodist_dashboard.html', context)
 
 
 def home_redirect(request):

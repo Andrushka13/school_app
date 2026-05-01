@@ -22,14 +22,8 @@
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
 
-         <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <div class="container-fluid">
-            <!-- Кнопка-бургер (видна только для студента) -->
-            {% if user.is_authenticated and user.student_profile %}
-            <button class="burger-btn" type="button" data-bs-toggle="offcanvas" data-bs-target="#studentMenu" aria-controls="studentMenu">
-                ☰
-            </button>
-            {% endif %}
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
             <a class="navbar-brand" href="{% url 'core:home' %}">IT-Школа «Юникрон»</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
@@ -37,11 +31,26 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
                     {% if user.is_authenticated %}
-                        <li class="nav-item">
-                            <span class="nav-link">Привет, {{ user.get_full_name|default:user.username }}</span>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="{% url 'core:logout' %}">Выйти</a>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-bs-toggle="dropdown">
+                                {{ user.first_name|default:user.username }}
+                            </a>
+                            <ul class="dropdown-menu dropdown-menu-end">
+                                {% if user.student_profile %}
+                                    <li><a class="dropdown-item" href="{% url 'core:student_account' %}">👤 Аккаунт</a></li>
+                                    <li><a class="dropdown-item" href="{% url 'core:student_schedule' %}">📅 Расписание</a></li>
+                                    <li><a class="dropdown-item" href="{% url 'core:student_grades' %}">📊 Мои оценки</a></li>
+                                    <li><hr class="dropdown-divider"></li>
+                                {% elif user.methodist_profile %}
+                                    <li><a class="dropdown-item" href="#">⚙️ Управление группами (скоро)</a></li>
+                                    <li><a class="dropdown-item" href="#">📋 Учебные планы (скоро)</a></li>
+                                    <li><hr class="dropdown-divider"></li>
+                                {% elif user.teacher_profile %}
+                                    <li><a class="dropdown-item" href="#">📖 Журнал (скоро)</a></li>
+                                    <li><hr class="dropdown-divider"></li>
+                                {% endif %}
+                                <li><a class="dropdown-item text-danger" href="{% url 'core:logout' %}">🚪 Выйти</a></li>
+                            </ul>
                         </li>
                     {% else %}
                         <li class="nav-item">
